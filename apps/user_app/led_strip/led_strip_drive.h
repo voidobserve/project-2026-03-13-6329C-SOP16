@@ -7,11 +7,11 @@
 #include "asm/gpio.h"
 
 
-#define MIC_PIN     IO_PORTA_09   //天奕幻彩使用8脚的芯片 ax3128a2
-#define LEDC_PIN    IO_PORT_DM //天奕幻彩使用8脚的芯片 ax3128a2
+// #define MIC_PIN     IO_PORTA_09   // 天奕幻彩使用8脚的芯片 ax3128a2
+// #define LEDC_PIN    IO_PORT_DM // 天奕幻彩使用8脚的芯片 ax3128a2
 #define MIC_AD_CH   AD_CH_PA9
-// #define MIC_PIN     IO_PORTA_08   //一般16脚芯片
-// #define LEDC_PIN    IO_PORTB_07   //一般16脚芯片的幻彩输出
+#define MIC_PIN     IO_PORTA_08   // 一般16脚芯片
+#define LEDC_PIN    IO_PORTB_07   // 一般16脚芯片的幻彩输出
 
 typedef enum
 {

@@ -647,7 +647,9 @@ uint16_t WS2812FX_mutil_c_gradual(void)
 
 
 //流星长度
-#define MAX_RATE 12
+// #define MAX_RATE 12  // 原值为12，减小此值可缩短尾焰长度
+#define MAX_RATE 6  // 原值为12，减小此值可缩短尾焰长度
+
 // 单色流水效果,流星雨  循环
 uint16_t meteor_signle_c(void)
 {
@@ -718,7 +720,8 @@ uint16_t meteor_signle_c(void)
 }
 
 //流星长度
-#define m_MAX_RATE 12
+// #define m_MAX_RATE 12
+#define m_MAX_RATE 6
 // _seg->colors[0] 流星颜色
 // _seg->colors[1]背景色
 // 带有背景色的流星，每次只有一个流星，流星时间间隔3秒
@@ -805,6 +808,12 @@ uint16_t single_color_meteor(void)
     meteor_len = 2;
   }
   else if(size == 8)
+  {
+    meteor_len = 1;
+  }
+
+  meteor_len /= 2;
+  if (meteor_len == 0)
   {
     meteor_len = 1;
   }
@@ -3316,7 +3325,7 @@ uint16_t starry_sky_()
   int led_r = (_seg->colors[0] >> 16) & 0xff;
   int led_g = (_seg->colors[0] >>  8) & 0xff;
   int led_b =  _seg->colors[0]        & 0xff;
-// printf("led_r = %d ,led_g = %d ,led_b = %d",led_r,led_g,led_b);
+  // printf("led_r = %d ,led_g = %d ,led_b = %d",led_r,led_g,led_b);
 
   for(int deng = 0; deng < 16; deng++)
   {

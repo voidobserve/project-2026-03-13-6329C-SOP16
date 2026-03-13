@@ -51,7 +51,7 @@ void fc_data_init(void)
 {
     u16 num;
     fc_effect.on_off_flag = DEVICE_ON;
-    fc_effect.led_num = 400;
+    fc_effect.led_num = 75;
     fc_effect.Now_state = IS_light_scene;
     fc_effect.rgb.r = 255;
     fc_effect.rgb.g = 0;
@@ -67,7 +67,6 @@ void fc_data_init(void)
     fc_effect.meteor_period = 8;            //默认8秒  周期值
     fc_effect.period_cnt = fc_effect.meteor_period*1000;  //ms,运行时的计数器
     fc_effect.mode_cycle = 0;   //模式完成一个循环的标志
-
 
     zd_countdown[0].set_on_off = DEVICE_OFF;
     zd_countdown[1].set_on_off = DEVICE_OFF;
