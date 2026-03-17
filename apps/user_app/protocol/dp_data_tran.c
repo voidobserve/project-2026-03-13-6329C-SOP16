@@ -845,6 +845,8 @@ void parse_led_strip_data(u8 *pBuf, u8 len)
 
   unsigned char num = 0;
 
+  // 屏蔽了app控制的数据
+#if 0
   /* 涂鸦DP协议解析 */
   handler_len = dp_extract_data_handle(pBuf);
   /* 中道孔明灯协议解析 */
@@ -852,6 +854,7 @@ void parse_led_strip_data(u8 *pBuf, u8 len)
 
 
   save_user_data_area3();
+#endif
 }
 
 

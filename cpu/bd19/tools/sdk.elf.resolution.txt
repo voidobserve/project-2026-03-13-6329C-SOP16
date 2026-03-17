@@ -139,9 +139,9 @@ obj/Release/cpu/bd19/ledc.o
 -r=obj/Release/cpu/bd19/ledc.o,request_irq,l
 -r=obj/Release/cpu/bd19/ledc.o,printf,l
 -r=obj/Release/cpu/bd19/ledc.o,ledc_rgb_to_buf,pl
--r=obj/Release/cpu/bd19/ledc.o,ledc_send_rgbbuf,pl
 -r=obj/Release/cpu/bd19/ledc.o,ledc_send_rgbbuf_isr,pl
 -r=obj/Release/cpu/bd19/ledc.o,os_sem_pend,
+-r=obj/Release/cpu/bd19/ledc.o,led_send_single_white_buf_isr,pl
 -r=obj/Release/cpu/bd19/ledc.o,ledc_test,pl
 -r=obj/Release/cpu/bd19/ledc.o,wdt_clear,l
 -r=obj/Release/cpu/bd19/ledc.o,os_time_dly,
@@ -2147,9 +2147,13 @@ obj/Release/apps/user_app/ws2812-fx-lib/Adafruit_NeoPixel_C/neo_pixel.o
 obj/Release/apps/user_app/ws2812-fx-lib/WS2812FX_C/ws2812_drive.o
 -r=obj/Release/apps/user_app/ws2812-fx-lib/WS2812FX_C/ws2812_drive.o,ws281x_init,pl
 -r=obj/Release/apps/user_app/ws2812-fx-lib/WS2812FX_C/ws2812_drive.o,ws281x_show,pl
--r=obj/Release/apps/user_app/ws2812-fx-lib/WS2812FX_C/ws2812_drive.o,ledc_send_rgbbuf_isr,l
+-r=obj/Release/apps/user_app/ws2812-fx-lib/WS2812FX_C/ws2812_drive.o,led_send_single_white_buf_isr,l
 -r=obj/Release/apps/user_app/ws2812-fx-lib/WS2812FX_C/ws2812_drive.o,HAL_GetTick,pl
 -r=obj/Release/apps/user_app/ws2812-fx-lib/WS2812FX_C/ws2812_drive.o,run_tick_per_10ms,pl
+-r=obj/Release/apps/user_app/ws2812-fx-lib/WS2812FX_C/ws2812_drive.o,fc_effect,l
+-r=obj/Release/apps/user_app/ws2812-fx-lib/WS2812FX_C/ws2812_drive.o,time_clock,l
+-r=obj/Release/apps/user_app/ws2812-fx-lib/WS2812FX_C/ws2812_drive.o,alarm_clock,l
+-r=obj/Release/apps/user_app/ws2812-fx-lib/WS2812FX_C/ws2812_drive.o,zd_countdown,l
 obj/Release/apps/user_app/ws2812-fx-lib/WS2812FX_C/ws2812fx2.o
 -r=obj/Release/apps/user_app/ws2812-fx-lib/WS2812FX_C/ws2812fx2.o,WS2812FX_init,pl
 -r=obj/Release/apps/user_app/ws2812-fx-lib/WS2812FX_C/ws2812fx2.o,Adafruit_NeoPixel_init,l
@@ -3146,7 +3150,6 @@ obj/Release/apps/spp_and_le/examples/multi_conn/app_multi_conn.o
 -r=obj/Release/apps/spp_and_le/examples/multi_conn/app_multi_conn.o,sys_key_event_enable,l
 -r=obj/Release/apps/spp_and_le/examples/multi_conn/app_multi_conn.o,app_power_event_handler,l
 -r=obj/Release/apps/spp_and_le/examples/multi_conn/app_multi_conn.o,printf,l
--r=obj/Release/apps/spp_and_le/examples/multi_conn/app_multi_conn.o,rf24_key_handle,l
 -r=obj/Release/apps/spp_and_le/examples/multi_conn/app_multi_conn.o,bt_comm_ble_status_event_handler,l
 -r=obj/Release/apps/spp_and_le/examples/multi_conn/app_multi_conn.o,bt_comm_ble_hci_event_handler,l
 -r=obj/Release/apps/spp_and_le/examples/multi_conn/app_multi_conn.o,log_tag_const_i_MULTI_CONN,l

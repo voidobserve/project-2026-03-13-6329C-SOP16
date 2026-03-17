@@ -51,7 +51,8 @@ void fc_data_init(void)
 {
     u16 num;
     fc_effect.on_off_flag = DEVICE_ON;
-    fc_effect.led_num = 75;
+    // fc_effect.led_num = 75;
+    fc_effect.led_num = 75 * 3; // 原本是75个灯的RGB幻彩，但是改成单色、白光的流星灯之后，3个字节的RGB数据合成一个字节，导致实际的数据少了 1/3，这里要乘以3
     fc_effect.Now_state = IS_light_scene;
     fc_effect.rgb.r = 255;
     fc_effect.rgb.g = 0;
@@ -64,7 +65,8 @@ void fc_data_init(void)
     fc_effect.music.m = 1;
     fc_effect.music.s = 90;
     //流星周期控制
-    fc_effect.meteor_period = 8;            //默认8秒  周期值
+    // fc_effect.meteor_period = 8;            //默认8秒  周期值
+    fc_effect.meteor_period = 60;
     fc_effect.period_cnt = fc_effect.meteor_period*1000;  //ms,运行时的计数器
     fc_effect.mode_cycle = 0;   //模式完成一个循环的标志
 
@@ -901,10 +903,12 @@ void color_meteor(void)
     if(fc_effect.dream_scene.direction == IS_forward)
     {
         option = 0|SIZE_XLARGE;
+        // option = SIZE_SMALL;
     }
     else
     {
         option = REVERSE|SIZE_XLARGE;
+        // option = REVERSE | SIZE_SMALL;
     }
 
     WS2812FX_setSegment_colorOptions(
