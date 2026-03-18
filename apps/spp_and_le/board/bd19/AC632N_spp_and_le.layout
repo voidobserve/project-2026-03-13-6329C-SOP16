@@ -7,14 +7,14 @@
 			<Cursor1 position="8854" topLine="309" />
 		</Cursor>
 	</File>
-	<File name="..\..\modules\bt\app_comm_edr.c" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1324" topLine="18" />
-		</Cursor>
-	</File>
 	<File name="..\..\..\user_app\led_strip\led_strip_drive.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="317" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="board_ac6328a_demo_cfg.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="16143" topLine="258" />
 		</Cursor>
 	</File>
 	<File name="..\..\..\user_app\led_strip\led_strand_effect.c" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -22,14 +22,14 @@
 			<Cursor1 position="2211" topLine="43" />
 		</Cursor>
 	</File>
+	<File name="..\..\modules\bt\app_comm_edr.c" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1324" topLine="18" />
+		</Cursor>
+	</File>
 	<File name="..\..\..\user_app\led_strip\led_strip_drive.c" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="204" topLine="3" />
-		</Cursor>
-	</File>
-	<File name="board_ac6328a_demo_cfg.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="16143" topLine="258" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

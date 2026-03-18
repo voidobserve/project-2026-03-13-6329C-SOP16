@@ -788,7 +788,8 @@ uint16_t single_color_meteor(void)
 {
   u8 offset;
   offset = 13;
-  static uint8_t temp_color = 100;
+  // static uint8_t temp_color = 100;
+  static uint8_t temp_color = 255;
   uint32_t r1, g1, b1, w1;
  
   uint8_t  rate = 0;
@@ -812,15 +813,22 @@ uint16_t single_color_meteor(void)
     meteor_len = 1;
   }
 
-  meteor_len /= 2;
-  if (meteor_len == 0)
-  {
-    meteor_len = 1;
-  }
+  // meteor_len /= 2;
+  // if (meteor_len == 0)
+  // {
+  //   meteor_len = 1;
+  // }
+
+  // USER_TO_DO 这里固定了流星灯整体的长度，只调试出来给客户用
+  // meteor_len = 4; // meteor_len == 4，tmep_color == 255，rate == 255，这时尾焰长度是 64
+  meteor_len = 3; // meteor_len == 3，tmep_color == 255，rate == 255，这时尾焰长度是 85
+  // meteor_len = 2;
+  // meteor_len = 1;
 
   if(_seg_rt->counter_mode_step == 0)   //该判断放在这里，解决效果切换时，立即切换
   {
-    temp_color = 100;
+    // temp_color = 100;
+    temp_color = 255;
     SET_CYCLE;
     // fc_effect.mode_cycle = 1;
   } 
@@ -848,10 +856,14 @@ uint16_t single_color_meteor(void)
     }
 
 
-    r1 = r * rate / 100;
-    g1 = g * rate / 100;
-    b1 = b * rate / 100;
-    w1 = w * rate / 100;
+    // r1 = r * rate / 100;
+    // g1 = g * rate / 100;
+    // b1 = b * rate / 100;
+    // w1 = w * rate / 100;
+    r1 = r * rate / 255;
+    g1 = g * rate / 255;
+    b1 = b * rate / 255;
+    w1 = w * rate / 255;
 
     if(temp_color >= meteor_len)temp_color -= meteor_len;
     else  temp_color = 0;
@@ -871,7 +883,8 @@ uint16_t single_color_meteor(void)
     {
       SET_CYCLE;
       fc_effect.mode_cycle = 1;
-      temp_color = 100;
+      // temp_color = 100;
+      temp_color = 255;
       // printf("\n fc_effect.mode_cycle=%d",fc_effect.mode_cycle);
     } 
   

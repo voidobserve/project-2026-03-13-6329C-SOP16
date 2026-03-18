@@ -52,7 +52,8 @@ void fc_data_init(void)
     u16 num;
     fc_effect.on_off_flag = DEVICE_ON;
     // fc_effect.led_num = 75;
-    fc_effect.led_num = 75 * 3; // 原本是75个灯的RGB幻彩，但是改成单色、白光的流星灯之后，3个字节的RGB数据合成一个字节，导致实际的数据少了 1/3，这里要乘以3
+    // fc_effect.led_num = 75 * 3; // 原本是75个灯的RGB幻彩，但是改成单色、白光的流星灯之后，3个字节的RGB数据合成一个字节，导致实际的数据少了 1/3，这里要乘以3
+    fc_effect.led_num = 150 * 3; // 150灯单色、白光流星
     fc_effect.Now_state = IS_light_scene;
     fc_effect.rgb.r = 255;
     fc_effect.rgb.g = 0;
@@ -902,13 +903,13 @@ void color_meteor(void)
     uint8_t option;
     if(fc_effect.dream_scene.direction == IS_forward)
     {
-        option = 0|SIZE_XLARGE;
-        // option = SIZE_SMALL;
+        // option = 0|SIZE_XLARGE;
+        option = SIZE_LARGE;
     }
     else
     {
-        option = REVERSE|SIZE_XLARGE;
-        // option = REVERSE | SIZE_SMALL;
+        // option = REVERSE|SIZE_XLARGE;
+        option = REVERSE | SIZE_LARGE;
     }
 
     WS2812FX_setSegment_colorOptions(
