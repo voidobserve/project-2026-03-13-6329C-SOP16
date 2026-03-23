@@ -156,7 +156,7 @@ static void multi_key_event_handler(struct sys_event *event)
         key_value = event->u.key.value;
         // log_info("app_key_evnet: %d,%d\n", event_type, key_value);
        
-        // rf24_key_handle(event); // USER_TO_DO屏蔽了2.4G遥控功能
+        rf24_key_handle(event); // USER_TO_DO屏蔽了2.4G遥控功能
 
     }
 

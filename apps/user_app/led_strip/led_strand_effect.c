@@ -67,7 +67,7 @@ void fc_data_init(void)
     fc_effect.music.s = 90;
     //流星周期控制
     // fc_effect.meteor_period = 8;            //默认8秒  周期值
-    fc_effect.meteor_period = 60;
+    fc_effect.meteor_period = 60; // 60s 
     fc_effect.period_cnt = fc_effect.meteor_period*1000;  //ms,运行时的计数器
     fc_effect.mode_cycle = 0;   //模式完成一个循环的标志
 
